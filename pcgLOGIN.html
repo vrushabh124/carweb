@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('/img/home1.jpg') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s ease;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            color: #fff;
+            width: 400px;
+        }
+        .form-box {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .form-box.active {
+            display: flex;
+        }
+        .form-box input {
+            width: 90%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            outline: none;
+            font-size: 14px;
+        }
+        .form-box button {
+            width: 95%;
+            background: linear-gradient(45deg, #ff512f, #dd2476);
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .form-box button:hover {
+            background: linear-gradient(45deg, #ec4220, #c31664);
+        }
+        .toggle-link {
+            color: #ff9800;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .toggle-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="login-box" class="form-box active">
+            <h2>Sign In</h2>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <div>
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember Me</label>
+            </div>
+            <button>Login</button>
+            <a class="toggle-link" onclick="toggleForm('forgot-password')">Forgot Password?</a>
+            <a class="toggle-link" onclick="toggleForm('signup')">Create an account</a>
+        </div>
+        <div id="signup-box" class="form-box">
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Full Name" required>
+            <input type="number" placeholder="Age" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button>Sign Up</button>
+            <a class="toggle-link" onclick="toggleForm('login')">Already have an account? Sign In</a>
+        </div>
+        <div id="forgot-password-box" class="form-box">
+            <h2>Forgot Password</h2>
+            <input type="email" placeholder="Enter your email" required>
+            <button>Reset Password</button>
+            <a class="toggle-link" onclick="toggleForm('login')">Back to Sign In</a>
+        </div>
+    </div>
+    <script>
+        function toggleForm(form) {
+            document.querySelectorAll('.form-box').forEach(box => box.classList.remove('active'));
+            document.getElementById(`${form}-box`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
