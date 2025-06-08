@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automation Car</title>
+  <link rel="stylesheet" href="testing.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">MyBrand</a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Content</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <div class="login-container">
+        <a href="#" class="login-btn">Sign In</a>
+      </div>
+      <button class="toggle-btn" id="toggleBtn">&#9776;</button>
+    </nav>
+  </header>
+
+
+
+
+
+
+  <div class="hero" id="heroText">AUTOMATION CAR WITH AI</div>
+
+  <div class="content">
+    <p>Welcome to Automation Car with AI, your premier destination for exploring the revolutionary advancements shaping
+      the
+      automotive world. We believe the future of transportation is autonomous, intelligent, and accessible. Discover how
+      artificial intelligence is transforming vehicles into sophisticated, self-driving companions, enhancing safety,
+      efficiency, and your overall driving experience.</p>
+    <button class="btn">Click Me</button>
+  </div>
+
+  <div class="video-container">
+    <video controls>
+      <source src="invideo-ai-1080 AI-Powered Cars_ The Future of Driving! 2025-05-23.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="scroll-section">
+    <div class="scroll-title">Collaboration = You & Automation</div>
+    <p class="scroll-text" id="scrollText">Automation enhances efficiency, balancing human and AI capabilities for
+      seamless performance.</p>
+  </div>
+
+
+
+  <section class="info-section">
+    <div class="info-content">
+      <span style="color: #ff5e57; font-weight: bold; font-size: 1.2rem;">Computer Vision Model</span>
+      <p class="info-description">
+        Computer Vision (CV) is a field of artificial intelligence that trains computers to interpret and understand the
+        visual
+        world. In autonomous cars, CV models are paramount for processing data from onboard cameras, allowing the
+        vehicle to
+        perceive its environment in real-time. This perception is crucial for everything from basic navigation to
+        complex
+        decision-making in dynamic traffic situations.
+
+      </p>
+    </div>
+    <div class="info-image">
+      <img src="/img/img1.png" alt="AI analyzing an image">
+    </div>
+  </section>
+
+  <section class="info-section">
+    <div class="info-image">
+      <img src="/img/img2" alt="AI analyzing an image">
+    </div>
+    <div class="info-content">
+      <span style="color: #ff5e57; font-weight: bold; font-size: 1.2rem;">Sensor Fusion Models</span>
+      <p class="info-description">
+        It's the intelligent process of combining data from multiple, diverse sensors to create a more complete,
+        accurate, and
+        robust understanding of the vehicle's surroundings. By leveraging the complementary nature of different sensor
+        technologies, autonomous cars can overcome the limitations of individual sensors, ensuring higher levels of
+        safety and
+        reliability in all driving conditions.
+      </p>
+    </div>
+
+  </section>
+
+  <section class="info-section">
+    <div class="info-content">
+      <span style="color: #ff5e57; font-weight: bold; font-size: 1.2rem;">Planning and Decision-Making Models</span>
+      <p class="info-description">
+        Computer Vision (CV) is a field of artificial intelligence that trains computers to interpret and understand the
+        visual
+        world. In autonomous cars, CV models are paramount for processing data from onboard cameras, allowing the
+        vehicle to
+        perceive its environment in real-time. This perception is crucial for everything from basic navigation to
+        complex
+        decision-making in dynamic traffic situations.
+
+      </p>
+    </div>
+    <div class="info-image">
+      <img src="/img/img1.png" alt="AI analyzing an image">
+    </div>
+  </section>
+
+  <script>
+    // Change paragraph color while scrolling
+    window.addEventListener("scroll", function () {
+      let scrollText = document.getElementById("scrollText");
+      let colors = ["#ff4a4a", "#ff7eb3", "#4a90e2", "#50e3c2", "#f5a623"];
+      let index = Math.floor(window.scrollY / 50) % colors.length;
+      scrollText.style.color = colors[index];
+    });
+  </script>
+
+
+  <section class="info-card-container">
+    <div class="info-card">
+      <h3 class="info-card-title">Essential Guide</h3>
+      <p class="info-card-description">Learn the fundamentals of web development with this comprehensive guide.</p>
+      <button class="download-btn">Download</button>
+    </div>
+    <div class="info-card">
+      <h3 class="info-card-title">Advanced Techniques</h3>
+      <p class="info-card-description">Explore advanced techniques and best practices to improve your skills.</p>
+      <button class="download-btn">Download</button>
+    </div>
+    <div class="info-card">
+      <h3 class="info-card-title">UI/UX Design</h3>
+      <p class="info-card-description">Enhance your design knowledge with UI/UX principles and methods.</p>
+      <button class="download-btn">Download</button>
+    </div>
+    <div class="info-card">
+      <h3 class="info-card-title">Performance Optimization</h3>
+      <p class="info-card-description">Improve your website’s performance and speed with expert tips.</p>
+      <button class="download-btn">Download</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 YourCompany. All rights reserved.</p>
+    <p>For inquiries, contact us at <a href="mailto:support@yourcompany.com">support@yourcompany.com</a></p>
+    <p>Need help? Visit our <a href="#">Help Center</a></p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" class="fab fa-facebook"></a>
+      <a href="https://www.twitter.com" class="fab fa-twitter"></a>
+      <a href="https://www.instagram.com" class="fab fa-instagram"></a>
+      <a href="https://www.linkedin.com" class="fab fa-linkedin"></a>
+
+    </div>
+  </footer>
+  <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Information Cards</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .info-card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 80%;
+            margin: auto;
+        }
+        .info-card {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+        }
+        .info-card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .info-card-description {
+            font-size: 1rem;
+            color: #b0b0b0;
+            margin: 10px 0;
+        }
+        .download-btn {
+            background-color: #ff5e57;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #e04e47;
+        }
+        @media (max-width: 768px) {
+            .info-card-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="info-card-container">
+        <div class="info-card">
+            <h3 class="info-card-title">Essential Guide</h3>
+            <p class="info-card-description">Learn the fundamentals of web development with this comprehensive guide.</p>
+            <button class="download-btn">Download</button>
+        </div>
+        <div class="info-card">
+            <h3 class="info-card-title">Advanced Techniques</h3>
+            <p class="info-card-description">Explore advanced techniques and best practices to improve your skills.</p>
+            <button class="download-btn">Download</button>
+        </div>
+        <div class="info-card">
+            <h3 class="info-card-title">UI/UX Design</h3>
+            <p class="info-card-description">Enhance your design knowledge with UI/UX principles and methods.</p>
+            <button class="download-btn">Download</button>
+        </div>
+        <div class="info-card">
+            <h3 class="info-card-title">Performance Optimization</h3>
+            <p class="info-card-description">Improve your website’s performance and speed with expert tips.</p>
+            <button class="download-btn">Download</button>
+        </div>
+    </section>
+</body>
+</html>
